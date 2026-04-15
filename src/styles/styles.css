@@ -78,8 +78,12 @@ button:disabled {
 .site-header,
 .site-footer,
 .layout {
-  width: min(1120px, calc(100% - 2rem));
+  width: 95%;
+  max-width: 1600px;
   margin-inline: auto;
+}
+html {
+  font-size: 20px;
 }
 
 .site-header {
@@ -176,8 +180,9 @@ select:focus {
 
 .cards-grid,
 .saved-grid {
-  display: grid;
-  gap: 1rem;
+ display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
 }
 
 .card,
