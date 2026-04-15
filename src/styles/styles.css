@@ -48,6 +48,27 @@ button,
 select {
   font: inherit;
 }
+select {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: var(--panel);
+  color: var(--text);
+  appearance: none;
+  cursor: pointer;
+}
+
+/* Dropdown options (best-effort styling) */
+select option {
+  background: #102438;
+  color: #f8fafc;
+}
+select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(217, 119, 6, 0.3);
+}
 
 button {
   border: none;
