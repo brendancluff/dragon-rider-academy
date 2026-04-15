@@ -1,3 +1,4 @@
+import "../styles/styles.css";
 import { riderSpecialties, riderTemperaments } from "../data/academyData.js";
 import { fetchRandomDragon, fetchRandomRider } from "./api.js";
 import { getSavedTeams, saveTeam, removeTeam, clearTeams, getTheme, setTheme } from "./storage.js";
