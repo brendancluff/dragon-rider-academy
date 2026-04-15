@@ -1,14 +1,17 @@
 {
   "name": "dragon-rider-academy",
+  "homepage": "https://brendancluff.github.io/dragon-rider-academy/",
   "private": true,
   "version": "1.0.0",
   "type": "module",
   "scripts": {
     "start": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
+    "gh-pages": "^6.3.0",
     "vite": "^7.1.0"
   }
 }
