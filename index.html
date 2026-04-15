@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dragon Rider Academy</title>
+  <meta
+    name="description"
+    content="A WDD330 final project that generates riders and dragons, pairs them into teams, and saves them with localStorage."
+  />
+  <link rel="preconnect" href="https://www.dnd5eapi.co" />
+  <link rel="preconnect" href="https://randomuser.me" />
+  <script type="module" crossorigin src="/dragon-rider-academy/assets/index-r_9Rk8mL.js"></script>
+  <link rel="stylesheet" crossorigin href="/dragon-rider-academy/assets/index-wmmI7ORr.css">
+</head>
+<body>
+  <header class="site-header">
+    <div>
+      <p class="eyebrow">WDD330 Final Project</p>
+      <h1>Dragon Rider Academy</h1>
+      <p class="intro">
+        Generate a dragon, summon a rider, pair them into a squad, and save your best
+        academy teams.
+      </p>
+    </div>
+    <button id="themeToggle" class="secondary-button" aria-label="Toggle theme">Toggle Theme</button>
+  </header>
+
+  <main class="layout">
+    <section class="panel controls-panel">
+      <h2>Academy Forge</h2>
+      <form id="generatorForm" class="stack">
+        <label>
+          Rider specialty
+          <select id="specialtySelect" name="specialty">
+            <option value="all">Any specialty</option>
+          </select>
+        </label>
+
+        <label>
+          Rider temperament
+          <select id="temperamentSelect" name="temperament">
+            <option value="all">Any temperament</option>
+          </select>
+        </label>
+
+        <div class="button-row">
+          <button type="button" id="generateDragonBtn">Generate Dragon</button>
+          <button type="button" id="generateRiderBtn">Generate Rider</button>
+          <button type="submit" id="generatePairBtn">Forge Pair</button>
+        </div>
+      </form>
+
+      <div id="status" class="status" aria-live="polite">Ready to train your next pair.</div>
+
+      <div class="button-row compact">
+        <button id="saveTeamBtn" class="accent-button" disabled>Save Team</button>
+        <button id="clearCurrentBtn" class="secondary-button">Clear Current</button>
+      </div>
+    </section>
+
+    <section class="panel current-panel">
+      <div class="panel-head">
+        <h2>Current Pair</h2>
+        <span id="compatibilityBadge" class="badge">Compatibility: --</span>
+      </div>
+
+      <div class="cards-grid">
+        <article class="card" id="dragonCard">
+          <h3>Dragon</h3>
+          <div id="dragonContent" class="placeholder">No dragon generated yet.</div>
+        </article>
+
+        <article class="card" id="riderCard">
+          <h3>Rider</h3>
+          <div id="riderContent" class="placeholder">No rider generated yet.</div>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel collection-panel">
+      <div class="panel-head">
+        <h2>Saved Squads</h2>
+        <button id="clearSavedBtn" class="secondary-button">Clear Saved</button>
+      </div>
+      <div id="savedTeams" class="saved-grid">
+        <p class="placeholder">No squads saved yet.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Built with JavaScript modules, fetch, JSON, events, CSS transitions, and localStorage.</p>
+  </footer>
+</body>
+</html>
